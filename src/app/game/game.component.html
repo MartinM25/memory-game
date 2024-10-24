@@ -1,0 +1,18 @@
+<div class="game-container">
+  <div class="score" id="score">Score: {{ score }}</div>
+
+  <!-- Game Squares -->
+  <div class="grid">
+    <div *ngFor="let square of squares" 
+      [id]="'square-' + square.id"
+      class="square"
+      [style.backgroundColor]="square.color"
+      (click)="handleSquareClick(square)">
+    </div>
+  </div>
+
+    <!-- Game Buttons -->
+    <button *ngIf="!gameActive" (click)="startGame()">Start Game</button>
+    <button *ngIf="gameActive" (click)="quitGame()">Quit Game</button>
+</div>
+
