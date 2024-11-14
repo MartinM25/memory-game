@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px
+}
+
+.navbar-logo img {
+  height: 70px;
+}
+
+nav button {
+  height: 45px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 10px 100px;
+  }
+  
+}

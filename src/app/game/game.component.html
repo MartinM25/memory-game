@@ -1,0 +1,16 @@
+<div class="game-container">
+  <div id="score"> Your Score: {{ score }} </div>
+
+  <!-- are you sure you wanna quit? -->
+
+  <!-- Game Squares -->
+  <div class="grid">
+    <div *ngFor="let square of squares" class="square" [id]="'square-' + square.id" (click)="handleSquareClick(square)"
+      [style.backgroundColor]="square.color">
+    </div>
+  </div>
+
+  <!--Game Buttons  -->
+  <button mat-fab extended *ngIf="!gameActive" (click)="startGame()">Start Game</button>
+  <button mat-fab extended *ngIf="gameActive" (click)="openDialog()">Quit Game</button>
+</div>
